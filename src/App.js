@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
+import Header from "./containers/header";
+import Footer from "./containers/footer";
+import HomePage from "./containers/routes/home-page";
+import AuthPage from "./containers/routes/auth-page";
+import React, {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    render() {
+        const {location} = this.props;
+        const isAuthPage = location.pathname === '/auth';
+
+        return (
+            <div className={'main'}>
+                {!isAuthPage && <Header/>}
+                <Switch>
+                    <Route exact path='/' component={HomePage}/>
+                    <Route exact path='/auth' component={AuthPage}/>
+                    <Redirect to={'/'}/>
+                </Switch>
+                {!isAuthPage && <Footer/>}
+            </div>
+        );
+    }
 }
 
-export default App;
+App.propTypes = {};
+
+export default withRouter(App);
