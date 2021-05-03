@@ -8,7 +8,6 @@ import Footer from "./containers/footer";
 import Header from "./containers/header";
 import React, {Component} from 'react';
 
-
 class App extends Component {
     render() {
         const {location} = this.props;
@@ -30,7 +29,5 @@ class App extends Component {
         );
     }
 }
-
-App.propTypes = {};
 
 export default withRouter(App);
