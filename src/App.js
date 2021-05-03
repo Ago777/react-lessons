@@ -1,9 +1,9 @@
 import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
-import Shop from './containers/routes/shop-page';
 import Profile from './containers/routes/profile-page';
 import AuthPage from "./containers/routes/auth-page";
 import HomePage from "./containers/routes/home-page";
 import Film from './containers/routes/films-page';
+import Shop from './containers/routes/shop-page';
 import Footer from "./containers/footer";
 import Header from "./containers/header";
 import React, {Component} from 'react';
