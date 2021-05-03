@@ -4,7 +4,7 @@ class Film extends Component {
     render() {
         return (
             <div>
-                <h1>FILM PAGE</h1>
+                <h1>FILMS PAGE SOON</h1>
             </div>
         );
     }

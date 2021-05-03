@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import '../../../assets/auth-page/index.css'
+import '../../../assets/styles/auth-page/index.css'
 import SignIn from "../../../components/auth-page-components/sign-in";
 import SignUp from "../../../components/auth-page-components/sign-up";
 

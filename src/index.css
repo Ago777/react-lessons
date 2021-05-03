@@ -1,3 +1,5 @@
+@import "assets/styles";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,6 +20,10 @@ body {
         'footer';
 }
 
+a {
+  margin: 0;
+}
+
 header {
   grid-area: header;
 }
@@ -28,4 +34,8 @@ header {
 
 footer {
   grid-area: footer;
+}
+
+.content {
+  text-align: center;
 }

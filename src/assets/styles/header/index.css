@@ -1,0 +1,12 @@
+img {
+    object-fit: cover;
+}
+
+.active {
+    color: #000;
+    background-color: #ccc;
+}
+
+.header {
+    padding: 5px 0 5px 0;
+}

@@ -1,4 +1,4 @@
-import "../../../assets/home-page/index.css";
+import "../../../assets/styles/home-page/index.css";
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
