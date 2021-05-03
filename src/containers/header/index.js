@@ -12,18 +12,18 @@ class Header extends Component {
                         LOGO
                     </Link>
                     <div className="w3-right w3-hide-small">
-                        <Link to={'/'} className="w3-bar-item w3-button">
-                            <i className="fa fa-home" style={{marginRight: '5px'}}/>
-                            HOME
+                        <Link to={'/films'} className="w3-bar-item w3-button">
+                            <i className="fa fa-video-camera" style={{marginRight: '5px'}}/>
+                            FILMS
                         </Link>
-                        {/*<Link to={'/contact'} className="w3-bar-item w3-button">*/}
-                        {/*    <i className="fa fa-envelope"/>*/}
-                        {/*    CONTACT*/}
-                        {/*</Link>*/}
-                        {/*<Link to={'/about'} className="w3-bar-item w3-button">*/}
-                        {/*    <i className="fa fa-envelope"/>*/}
-                        {/*    ABOUT*/}
-                        {/*</Link>*/}
+                        <Link to={'/products'} className="w3-bar-item w3-button">
+                            <i className="fa fa-product-hunt" style={{marginRight: '5px'}}/>
+                            PRODUCTS
+                        </Link>
+                        <Link to={'/profile'} className="w3-bar-item w3-button">
+                            <i className="fa fa-user" style={{marginRight: '5px'}}/>
+                            PROFILE
+                        </Link>
                         <Link to={'/auth'} className="w3-bar-item w3-button">
                             <i className="fa fa-sign-out" style={{marginRight: '5px'}}/>
                             SIGN OUT
