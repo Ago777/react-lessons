@@ -10,8 +10,7 @@ import React, {Component} from 'react';
 
 class App extends Component {
     render() {
-        const {location} = this.props;
-        const isAuthPage = location.pathname === '/auth';
+        const isAuthPage = this.props.location.pathname === '/auth';
 
         return (
             <div className={'main'}>

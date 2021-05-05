@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
 class SignUp extends Component {
     signUpHandler = () => {
@@ -8,21 +7,25 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div className="form-container sign-up-container">
-                <div className={'form'}>
-                    <h1 style={{marginBottom: '20px'}}>Create Account</h1>
-                    <input type="text" placeholder="Phone"/>
-                    <input type="text" placeholder="Name"/>
-                    <input type="email" placeholder="Email"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Reapet Password"/>
-                    <button onClick={this.signUpHandler}>Sign Up</button>
+            <div className={'form'}>
+                <h1 style={{marginBottom: '20px'}}>Create Account</h1>
+                <input type="text" placeholder="Phone"/>
+                <span>Phone is not valid</span>
+                <input type="text" placeholder="Name"/>
+                <span>Name is not valid</span>
+                <input type="email" placeholder="Email"/>
+                <span>Email is not valid</span>
+                <input type="password" placeholder="Password"/>
+                <input type="password" placeholder="Repeat Password"/>
+                <span>Passwords is not match</span>
+                <button onClick={this.signUpHandler}>Sign Up</button>
+                <div style={{marginTop: '5px'}}>
+                    Already hav an account?
+                    <span style={{color: 'red', cursor: 'pointer'}} onClick={() => this.props.toggleAuthForm('sign-in')}>Sign in</span>
                 </div>
             </div>
         );
     }
-}
-
-SignUp.propTypes = {};
+};
 
 export default SignUp;
