@@ -2,7 +2,6 @@ import {withRouter} from "react-router-dom";
 import React, {Component} from 'react';
 
 class SignIn extends Component {
-
     state = {
         email: '',
         password: '',
@@ -14,7 +13,7 @@ class SignIn extends Component {
             [field]: e.target.value,
             invalidFields: this.state.invalidFields.filter(item => item !== field)
         })
-    }
+    };
 
     checkValidation = () => {
         const {email, password} = this.state;
@@ -22,7 +21,7 @@ class SignIn extends Component {
             email: email.includes('@'),
             password: password.length >= 5
         }
-    }
+    };
 
     signInHandler = () => {
         const validation = this.checkValidation();
@@ -36,9 +35,13 @@ class SignIn extends Component {
                })
            }
         }else {
-            this.props.history.push('/')
+            const auth = JSON.parse(localStorage.getItem('auth'));
+            if(auth.email === this.state.email && auth.password === this.state.password) {
+                this.props.history.push('/');
+                localStorage.setItem('isLoggedIn', true)
+            }
         }
-    }
+    };
 
     render() {
         const {email, password, invalidFields} = this.state;

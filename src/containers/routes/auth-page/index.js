@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import '../../../assets/styles/auth-page/index.css'
 import SignIn from "../../../components/auth-page-components/sign-in";
 import SignUp from "../../../components/auth-page-components/sign-up";
+import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
+import '../../../assets/styles/auth-page/index.css'
+import React, {Component} from 'react';
 
 class AuthPage extends Component {
     state = {
@@ -16,6 +17,9 @@ class AuthPage extends Component {
 
     render() {
         const {authForm} = this.state;
+        if(localStorage.getItem('isLoggedIn')) {
+            return <Redirect to={'/'}/>
+        }
 
         return (
             <div className={'auth'}>
@@ -28,4 +32,4 @@ class AuthPage extends Component {
     }
 }
 
-export default AuthPage;
+export default withRouter(AuthPage);

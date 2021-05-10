@@ -9,6 +9,13 @@ import Header from "./containers/header";
 import React, {Component} from 'react';
 
 class App extends Component {
+    componentDidMount() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        if (!isLoggedIn) {
+            this.props.history.push('/auth')
+        }
+    }
+
     render() {
         const isAuthPage = this.props.location.pathname === '/auth';
 

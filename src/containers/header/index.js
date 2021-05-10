@@ -3,6 +3,11 @@ import {Link, NavLink} from "react-router-dom";
 import React, {Component} from 'react';
 
 class Header extends Component {
+
+    signOut = () => {
+        localStorage.removeItem('isLoggedIn');
+    }
+
     render() {
         return (
             <div className="w3-bar w3-black w3-card header">
@@ -30,7 +35,7 @@ class Header extends Component {
                         <i className="fa fa-user" style={{marginRight: '5px'}}/>
                         PROFILE
                     </Link>
-                    <Link to={'/auth'} className="w3-bar-item w3-button">
+                    <Link to={'/auth'} className="w3-bar-item w3-button" onClick={this.signOut}>
                         <i className="fa fa-sign-out" style={{marginRight: '5px'}}/>
                         SIGN OUT
                     </Link>
