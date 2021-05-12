@@ -34,6 +34,7 @@ header {
 
 footer {
   grid-area: footer;
+  position: unset;
 }
 
 .content {

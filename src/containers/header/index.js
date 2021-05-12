@@ -10,23 +10,19 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="w3-bar w3-black w3-card header">
+            <div className="w3-black w3-card header">
                 <Link to={'/'} className="w3-bar-item w3-wide">
                     <img src={Logo} alt={'logo'} width={50} height={25}/>
                 </Link>
                 <div className="w3-right w3-hide-small">
-                    {/*<a href={'/films'} className="w3-bar-item w3-button">*/}
-                    {/*    <i className="fa fa-video-camera" style={{marginRight: '5px'}}/>*/}
-                    {/*    FILMS*/}
-                    {/*</a>*/}
                     <Link to={'/films'} className="w3-bar-item w3-button">
                         <i className="fa fa-video-camera" style={{marginRight: '5px'}}/>
                         FILMS
                     </Link>
-                    {/*<Link to={'/films'} className="w3-bar-item w3-button">*/}
-                    {/*    <i className="fa fa-video-camera" style={{marginRight: '5px'}}/>*/}
-                    {/*    FILMS*/}
-                    {/*</Link>*/}
+                    <Link to={'/github-users'} className="w3-bar-item w3-button">
+                        <i className="fa fa-video-camera" style={{marginRight: '5px'}}/>
+                        GITHUB USERS
+                    </Link>
                     <Link to={'/shop'} className="w3-bar-item w3-button">
                         <i className="fa fa-product-hunt" style={{marginRight: '5px'}}/>
                         SHOP

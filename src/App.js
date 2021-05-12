@@ -1,4 +1,5 @@
 import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
+import GithubUsers from './containers/routes/github-users-page';
 import Profile from './containers/routes/profile-page';
 import AuthPage from "./containers/routes/auth-page";
 import HomePage from "./containers/routes/home-page";
@@ -9,12 +10,12 @@ import Header from "./containers/header";
 import React, {Component} from 'react';
 
 class App extends Component {
-    componentDidMount() {
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-        if (!isLoggedIn) {
-            this.props.history.push('/auth')
-        }
-    }
+    // componentDidMount() {
+    //     const isLoggedIn = localStorage.getItem('isLoggedIn');
+    //     if (!isLoggedIn) {
+    //         this.props.history.push('/auth')
+    //     }
+    // }
 
     render() {
         const isAuthPage = this.props.location.pathname === '/auth';
@@ -28,6 +29,7 @@ class App extends Component {
                         <Route exact path='/films' component={Film}/>
                         <Route exact path='/shop' component={Shop}/>
                         <Route exact path='/profile' component={Profile}/>
+                        <Route exact path='/github-users' component={GithubUsers}/>
                         <Route exact path='/auth' component={AuthPage}/>
                         <Redirect to={'/'}/>
                     </Switch>
