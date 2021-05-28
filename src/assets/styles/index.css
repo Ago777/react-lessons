@@ -1,4 +1,6 @@
-@import "./home-page";
-@import "./header";
-@import "./auth-page";
-@import "./github-users";
+@import './auth-page/index.css';
+@import './home-page/index.css';
+@import './header/index.css';
+@import './github-users/index.css';
+
+

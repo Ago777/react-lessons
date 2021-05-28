@@ -1,57 +1,27 @@
-import React, {Component, useState, useEffect} from 'react';
-//
-// const Shop = props => {
-//     let timerId;
-//     const [count, setCount] = useState(0);
-//     const [show, toggleShow] = useState(true);
-//
-//     useEffect(() => {
-//         toggleShow(true);
-//         timerId = setTimeout(() => toggleShow(false), 2000);
-//         return () => clearTimeout(timerId);
-//     }, [count])
-//
-//     return (
-//             <div>
-//                 <h1>Clicked {count} times</h1>
-//                 {!show && <button onClick={() => setCount(count + 1)}>Show Text</button>}
-//                 {show && <h1>Some Text</h1>}
-//             </div>
-//     );
-// };
+import React, {Component} from 'react';
+import ComponenctA from "./componenctA";
+import ComponenctB from "./componenctB";
 
-// class Shop extends Component {
-//     timerId;
-//     state = {
-//         count: 0,
-//         show: true
-//     }
-//
-//     componentDidMount() {
-//         this.timerId = setTimeout(() => this.setState({show: false}), 2000)
-//     }
-//
-//     componentDidUpdate(prevProps, prevState) {
-//         if (this.state.count !== prevState.count) {
-//             this.setState({show: true})
-//             this.timerId = setTimeout(() => this.setState({show: false}), 2000)
-//         }
-//     }
-//
-//     componentWillUnmount() {
-//         clearTimeout(this.timerId);
-//     }
-//
-//     render() {
-//         return (
-//             <div>
-//                 <h1>Clicked {this.state.count} times</h1>
-//                 {!this.state.show &&
-//                 <button onClick={() => this.setState({count: this.state.count + 1})}>Show Text</button>}
-//                 {this.state.show && <h1>Some Text</h1>}
-//             </div>
-//         );
-//     }
-// }
+class Shop extends Component {
+    state = {
+        countA: 0,
+        countB: 0,
+        countC: 0,
+    }
+
+    render() {
+        return (
+            <div>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
+                    <button onClick={() => this.setState({countA: 1})}>Change CountA</button>
+                    <button onClick={() => this.setState({countB: 1})}>Change CountB</button>
+                    <button onClick={() => this.setState({countC: 1})}>Change CountC</button>
+                </div>
+                <ComponenctA countA={this.state.countA}/>
+                <ComponenctB countB={this.state.countB} countC={this.state.countC}/>
+            </div>
+        );
+    }
+}
 
 export default Shop;
