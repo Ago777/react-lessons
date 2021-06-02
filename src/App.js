@@ -23,7 +23,7 @@ class App extends Component {
         return (
             <div className={'main'}>
                 {!isAuthPage && <Header/>}
-                <div className={'content'}>
+                <div className={'content'} >
                     <Switch>
                         <Route exact path='/' component={HomePage}/>
                         <Route exact path='/films' component={Film}/>
