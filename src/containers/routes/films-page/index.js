@@ -5,7 +5,6 @@ import {select} from '../../../store/actions';
 
 class Film extends Component {
     render() {
-        console.log(this.props)
         return (
             <div onClick={() => this.props.select([1,2,3])}>
                 <h1>FILMS PAGE SOON</h1>
